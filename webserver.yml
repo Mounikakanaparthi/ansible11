@@ -4,14 +4,14 @@
   gather_facts: yes
   tasks:
   - name: i want to install webserver on ubuntu nodes
-     apt:
-       name: apache2
-       state: present
+    apt:
+      name: apache2
+      state: present
     when: ansible_os_family =="Debian"
   - name: i want to start webserver o ubuntu nodes
     service:
-       name: apache2
-       state: started
+     name: apache2
+     state: started
     when: ansible_os_family =="Debian"       
 
 #   "Redhat" =="Debian"
